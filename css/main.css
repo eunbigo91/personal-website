@@ -1,0 +1,138 @@
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome|zocial);
+
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: "FontAwesome", sans-serif;
+}
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: "zocial", sans-serif;
+}
+
+* {
+    font-family: "Cormorant Garamond", serif;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 16px;
+}
+
+.container {
+    /*max-width: 950px;*/
+}
+
+.logo {
+    margin: 1em 0 0;
+    max-width: 120px;
+}
+
+.name {
+    margin: 1.2em 0 0;
+    font-size: 25px;
+}
+
+.job-title {
+    font-size: 20px;
+    font-weight: 300;
+    margin: .5em 0;
+}
+
+.hr-style {
+    margin: 0 0 1em;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.text-fade {
+    color: #a4a4a4;
+}
+
+.small_text {
+    font-size: 20px;
+}
+
+.bottom-space {
+    margin: 0 0 1em;
+}
+
+footer {
+    text-align: center;
+    margin: 2em 0 2em;
+}
+
+footer a{
+    margin: 0 1em;
+    position:relative;
+    font-size: 20px;
+    color: #000;
+}
+
+.copyright {
+    margin: 3em 0;
+    font-size: 15px;
+}
+
+
+@media screen and (min-width: 550px) and (max-width: 767px) {
+    #recent-work1, #recent-work2 {
+        width: 50%;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .job-title {
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .small-text {
+        font-size: 25px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .logo {
+        margin: .5em 0 0;
+        max-width: 150px;
+    }
+
+    .name {
+        margin: .5em 0 0;
+        font-size: 45px;
+    }
+
+    .job-title {
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    .small_text {
+        font-size: 28px;
+    }
+
+    .featured-work{
+        height: 143px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .name{
+        margin: .8em 0 0;
+    }
+
+    .featured-work {
+        height: 190px;
+    }
+}
