@@ -16,6 +16,13 @@
     font-family: "Cormorant Garamond", serif;
 }
 
+header {
+  background:
+    url(../img/bg.jpg);
+  background-size: cover;
+    height: 100vh;
+}
+
 img {
     width: 100%;
 }
@@ -33,6 +40,20 @@ p {
     max-width: 120px;
 }
 
+.title {
+    font-family: 'Ubuntu', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.text {
+    font-size: 16px;
+}
+
 .name {
     margin: 1.2em 0 0;
     font-size: 25px;
@@ -44,31 +65,34 @@ p {
     margin: .5em 0;
 }
 
-.hr-style {
-    margin: 0 0 1em;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+.contact-info {
+    position: relative;
+    border: 2px solid #FFF;
+    padding: 10px;
+    top: 50px;
 }
 
 .text-fade {
+    font-family: 'Ubuntu', sans-serif;
     color: #a4a4a4;
 }
 
-.small_text {
+.small-text {
     font-size: 20px;
 }
 
-.bottom-space {
-    margin: 0 0 1em;
-}
-
 footer {
-    text-align: center;
     margin: 2em 0 2em;
 }
 
 footer a{
+    margin: 0 1em;
+    position:relative;
+    font-size: 20px;
+    color: #000;
+}
+
+.icons{
     margin: 0 1em;
     position:relative;
     font-size: 20px;
@@ -129,7 +153,7 @@ footer a{
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     .name{
-        margin: .8em 0 0;
+        margin: 0;
     }
 
     .featured-work {
