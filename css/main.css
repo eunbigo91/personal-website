@@ -14,6 +14,7 @@
 
 * {
     font-family: "Cormorant Garamond", serif;
+    box-sizing: border-box;
 }
 
 header {
@@ -31,13 +32,14 @@ p {
     font-size: 16px;
 }
 
-.container {
-    /*max-width: 950px;*/
+.logo {
+    margin: .5em 0 0;
+    max-width: 160px;
 }
 
-.logo {
-    margin: -1.5em 0 0;
-    max-width: 150px;
+.mypic {
+    margin: .5em 0 0;
+    max-width: 100px;
 }
 
 .main {
@@ -51,12 +53,13 @@ p {
 }
 
 .title {
+    font-family: 'Ubuntu', sans-serif;
     margin: 1em 0 .5em;
 }
 
 .text {
-    font-size: 16px;
-    line-height: 2;
+    font-size: 18px;
+    line-height: 2.5;
     padding: 0 3.5em;
 }
 
@@ -65,25 +68,39 @@ p {
 }
 
 .job-title {
-    font-size: 20px;
     font-weight: 300;
     margin: .5em 0;
 }
 
-.contact-info {
+.contact-info a{
+    font-family: 'Ubuntu', sans-serif;
     position: relative;
-    border: 2px solid #FFF;
+    border: 2px solid #fff;
     padding: 10px;
     top: 50px;
+    color: #fff;
+    font-size: 17px;
+}
+
+.contact-info a:hover{
+    color: #fff;
 }
 
 .text-fade {
-    font-family: 'Ubuntu', sans-serif;
     color: #a4a4a4;
+}
+
+.text-white {
+    color: #fff;
 }
 
 .small-text {
     font-size: 20px;
+    font-weight: 300;
+}
+
+.bg-color1 {
+    background-color: #708e9c;
 }
 
 footer {
@@ -97,6 +114,10 @@ footer a{
     color: #000;
 }
 
+footer a:hover{
+    color: #000;
+}
+
 .icons {
     margin: 2em 0;
 }
@@ -106,6 +127,10 @@ footer a{
     position:relative;
     font-size: 20px;
     color: #000;
+}
+
+.icons a:hover{
+    color:#000;
 }
 
 .copyright {
