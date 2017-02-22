@@ -20,11 +20,6 @@ $(function(){
                 "descriptions" : "Built a multi-user blog, hosted on Google App Engine, with comments and login functionality. Developed authentication functionality using hmac module and saved users’ password securely using hashlib. "
             },
             {
-                "title" : "Tournament",
-                "pic" : "img/project4.png",
-                "descriptions" : "Built a PostgreSQL relational database scheme to store the results of a game tournament. Also provided a number of queries to efficiently report the results of the tournament and determine the winner."
-            },
-            {
                 "title" : "Item Catalog",
                 "pic" : "img/project5.png",
                 "descriptions" : "Developed a content management system using the Flask framework in Python. Authentication is provided via OAuth and all data is stored within a PostgreSQL database."
@@ -32,9 +27,13 @@ $(function(){
             {
                 "title" : "Neighborhood Map",
                 "pic" : "img/project6.png",
-                "descriptions" : "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the Wikipedia APIs."
+                "descriptions" : "A single page application, used of third-party libraries and APIs, feature a map of Seattle’s tour attractions. Used KnockoutJS to handle the list, filter, and any other information on the page that is subject to changing state."
             },
-
+            {
+                "title" : "Personal Blog Using Wordpress",
+                "pic" : "img/blog.png",
+                "descriptions" : "Used Wordpress and Wordpress basic theme to build my personal blog."
+            }
         ]
     };
 
@@ -62,7 +61,7 @@ $(function(){
             var projects = octopus.getProjects();
             var html = '';
             $.each(projects, function(projectIndex, project) {
-                html += '<div class="col-xs-12 col-sm-4 bottom-space">';
+                html += '<div class="col-xs-12 col-sm-4 bottom-space project-tile">';
                 html += '<picture> <img class="featured-work" src="'+project.pic+'" alt="project screen shot"></picture>';
                 html += '<h3 class="small-text">'+project.title+'</h3>';
                 html += '<p>'+project.descriptions+'</p>';

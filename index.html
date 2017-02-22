@@ -14,12 +14,13 @@
       <div class="main">
         <h1 class="name text-uppercase">Hello, I am Eunbi Go !</h1>
         <h3 class="job-title">Full Stack Web Developer</h3>
-        <h4 class="contact-info text-uppercase"><a href="#"> Contact me </a></h4>
+        <h4 class="contact-info text-uppercase"><a href="#contact"> Contact me </a></h4>
       </div>
     </div>
   </header>
   <section>
     <div class="row text-center">
+      <div class="container">
       <h2 class="title text-fade"> Who am I </h2>
       <div class="col-md-12"><img class="logo" src="img/logo1.svg" alt="Eunbi's portfolio logo"><img class="mypic" src="img/me.jpg" alt="Eunbi's picture"></div>
 
@@ -33,40 +34,46 @@
         <a class="zocial-googleplus" href="http://googleplus.com"></a>
       </div>
     </div>
+  </div>
   </section>
 
   <section>
-    <div class="row text-center bg-color1 text-white">
+    <div class="row bg-color1 text-white">
       <div class="col-xs-12 col-md-12">
-          <h2 class="title">Project</h2>
+          <h2 class="title text-center">Project</h2>
         <div class="container" id="project">
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="row">
-      <div class="col-md-12">
-        <picture>
-          <source media="(min-width: 767px)" srcset="img/seattle-1600_large_2x.jpg 2x, img/seattle-1600_large.jpg"/>
-          <source media="(min-width: 479px)" srcset="img/seattle-800_medium.jpg"/>
-        <img class="img-responsive first-image" src="img/seattle-500_small.jpg" alt="Beautiful Night Sight Seeing of Seattle">
-        </picture>
-      </div>
-    </div>
-  </section>
-
   <footer>
-    <div class="row">
+    <div class="row" id="contact">
       <div class="col-md-12 text-center">
-        <a class="zocial-github" href="http://github.com"></a>
-        <a class="zocial-linkedin" href="http://linkedin.com"></a>
-        <a class="zocial-facebook" href="http://facebook.com"></a>
-        <a class="zocial-googleplus" href="http://googleplus.com"></a>
+        <h2 class="title"> Get in touch </h2>
+        <p class="text">Thanks for stopping by to say hello!</p>
+
+        <div id="contact-area">
+          <form method="post" action="#">
+            <label for="contanctname"> NAME </label>
+            <input type="text" name="contactname" id="contactname">
+
+            <label for="contanctemail"> EMAIL </label>
+            <input type="text" name="contactemail" id="contactemail">
+
+            <label for="contanctsubject"> SUBJECT </label>
+            <input type="text" name="contanctsubject" id="contanctsubject">
+
+            <label for="contanctmessage"> MESSAGE </label>
+            <textarea name="contanctmessage" id="contanctmessage" cols="50" rows="10"></textarea>
+
+            <input type="submit" name="submit" value="SUBMIT" class="submit-button" />
+          </form>
+        </div>
+
+
       </div>
     </div>
-
   </footer>
 
     <!-- Bootstrap -->
