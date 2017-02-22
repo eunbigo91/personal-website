@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400|Ubuntu" rel="stylesheet">
   <title>Eunbi Go</title>
 </head>
 <body>
@@ -16,12 +15,19 @@
         <h3 class="job-title">Full Stack Web Developer</h3>
         <h4 class="contact-info text-uppercase"><a href="#contact"> Contact me </a></h4>
       </div>
+      <div class="arrows">
+        <a href="#myself">
+          <svg>
+            <path d="M1 20 L20 42 L40 20"></path>
+          </svg>
+        </a>
+      </div>
     </div>
   </header>
   <section>
-    <div class="row text-center">
+    <div class="row text-center" id="myself">
       <div class="container">
-      <h2 class="title text-fade"> Who am I </h2>
+      <h2 class="title text-fade"> About me </h2>
       <div class="col-md-12"><img class="logo" src="img/logo1.svg" alt="Eunbi's portfolio logo"><img class="mypic" src="img/me.jpg" alt="Eunbi's picture"></div>
 
       <p class="text">
@@ -47,7 +53,7 @@
     </div>
   </section>
 
-  <footer>
+  <section>
     <div class="row" id="contact">
       <div class="col-md-12 text-center">
         <h2 class="title"> Get in touch </h2>
@@ -70,12 +76,16 @@
             <input type="submit" name="submit" value="SUBMIT" class="submit-button" />
           </form>
         </div>
-
-
       </div>
     </div>
-  </footer>
+  </section>
 
+  <footer class="text-center bg-color2">
+    <a class="zocial-github" href="http://github.com"></a>
+    <a class="zocial-linkedin" href="http://linkedin.com"></a>
+    <a class="zocial-facebook" href="http://facebook.com"></a>
+    <a class="zocial-googleplus" href="http://googleplus.com"></a>
+  </footer>
     <!-- Bootstrap -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
