@@ -21,7 +21,6 @@ header {
     background:
         url(../img/bg.jpg);
     background-size: cover;
-    height: 100vh;
 }
 
 img {
@@ -30,6 +29,10 @@ img {
 
 p {
     font-size: 16px;
+}
+
+.full {
+    height: 100vh;
 }
 
 .logo {
@@ -100,7 +103,11 @@ p {
 }
 
 .bg-color1 {
-    background-color: #708e9c;
+    background-color: #c5443b;
+}
+
+.bottom-space {
+    margin: 1.5em 0;
 }
 
 footer {
