@@ -1,77 +1,3 @@
-$(function(){
-
-    /* ======= Model ======= */
-
-    var model = {
-        projects: [
-            {
-                "title" : "Movie Trailer",
-                "pic" : "img/project1.png",
-                "descriptions" : "Server-side code written in Python to store a list of my favorite movies. This data is then served to a web page using HTML and CSS allowing visitors to review these movies and watch the trailers."
-            },
-            {
-                "title" : "Build Portfolio",
-                "pic" : "img/project2.png",
-                "descriptions" : "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers."
-            },
-            {
-                "title" : "Multi User Blog",
-                "pic" : "img/project3.png",
-                "descriptions" : "Built a multi-user blog, hosted on Google App Engine, with comments and login functionality. Developed authentication functionality using hmac module and saved users’ password securely using hashlib. "
-            },
-            {
-                "title" : "Item Catalog",
-                "pic" : "img/project5.png",
-                "descriptions" : "Developed a content management system using the Flask framework in Python. Authentication is provided via OAuth and all data is stored within a PostgreSQL database."
-            },
-            {
-                "title" : "Neighborhood Map",
-                "pic" : "img/project6.png",
-                "descriptions" : "A single page application, used of third-party libraries and APIs, feature a map of Seattle’s tour attractions. Used KnockoutJS to handle the list, filter, and any other information on the page that is subject to changing state."
-            },
-            {
-                "title" : "Personal Blog Using Wordpress",
-                "pic" : "img/blog.png",
-                "descriptions" : "Used Wordpress and Wordpress basic theme to build my personal blog."
-            }
-        ]
-    };
-
-    /* ======= Octopus ======= */
-
-    var octopus = {
-        init: function() {
-            view.init();
-        },
-
-        getProjects: function() {
-            return model.projects;
-        }
-
-    };
-
-
-    /* ======= View ======= */
-
-    var view = {
-        init: function() {
-            this.render();
-        },
-        render: function() {
-            var projects = octopus.getProjects();
-            var html = '';
-            $.each(projects, function(projectIndex, project) {
-                html += '<div class="col-xs-12 col-sm-4 bottom-space project-tile">';
-                html += '<picture> <img class="featured-work" src="'+project.pic+'" alt="project screen shot"></picture>';
-                html += '<h3 class="small-text">'+project.title+'</h3>';
-                html += '<p>'+project.descriptions+'</p>';
-                html += '</div>';
-            });
-            $('#project').html(html);
-        }
-    };
-    octopus.init();
-});
 
 $('a[href*="#"]:not([href="#"])').click(function() {
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -86,3 +12,57 @@ $('a[href*="#"]:not([href="#"])').click(function() {
     }
   }
 });
+
+
+var data =[
+    {
+        "name" : "develop",
+        "percentage" : "70"
+    },
+    {
+        "name" : "design",
+        "percentage" : "80"
+    }
+];
+
+function degreesToRadians(deg) {
+    return (deg/180) * Math.PI;
+}
+
+function percentToRadians(percentage) {
+    var degrees = percentage * 360 / 100;
+    return degreesToRadians(degrees + 270);
+}
+
+var radius=50;
+
+$.each(data, function(dataIndex, data) {
+    console.log(dataIndex);
+    var canvas = document.getElementById('canvas'+(dataIndex+1));
+    var percentage = data.percentage;
+    var x = canvas.width / 2;
+    var y = canvas.height / 2;
+
+    var context = canvas.getContext('2d');
+
+    var startAngle = percentToRadians(0);
+    var endAngle = percentToRadians(percentage);
+    var counterClockwise = false;
+
+    context.beginPath();
+    context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+    context.lineWidth = 3;
+
+    context.strokeStyle = 'black';
+    context.stroke();
+
+    context.font = radius/2.5 + "px Ubuntu";
+    context.fillStyle = "lightblue";
+    context.textAlign = "center";
+
+    context.fillText(percentage+"%", x, y*1.05);
+});
+
+
+
+
