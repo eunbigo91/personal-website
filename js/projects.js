@@ -42,12 +42,12 @@ $(function(){
     var octopus = {
         init: function() {
             view.init();
+            detailView.init();
         },
 
         getProjects: function() {
             return model.projects;
         }
-
     };
 
 
@@ -61,15 +61,32 @@ $(function(){
             var projects = octopus.getProjects();
             var html = '';
             $.each(projects, function(projectIndex, project) {
-                html += '<div class="col-xs-12 col-sm-4 bottom-space project-tile">';
+                html += '<div class="col-xs-12 col-sm-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
                 html += '<picture> <img class="featured-work" src="'+project.pic+'" alt="project screen shot"></picture>';
-                html += '<h3 class="small-text">'+project.title+'</h3>';
-                html += '<p>'+project.descriptions+'</p>';
                 html += '</div>';
             });
             $('#project').html(html);
         }
     };
+
+    var detailView = {
+        init: function() {
+            $('.project-tile').click(function(obj) {
+                detailView.render(obj);
+            });
+        },
+        render: function(obj) {
+            var selected = obj.currentTarget.id.split("-")[1];
+            var html = '';
+            var project = octopus.getProjects()[selected];
+            html += '<h3 class="detail-title text-center">'+project.title+'</h3>';
+            html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
+            html += '<p class="detail-text">'+project.descriptions+'</p>';
+            $("#project-detail").html(html);
+        }
+    };
+
     octopus.init();
+
 });
 

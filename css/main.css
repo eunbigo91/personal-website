@@ -132,12 +132,27 @@ p {
 .project-tile {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    height: 350px;
 }
 
 .project-tile:hover {
     background-color: rgba(224, 193, 190, 0.43);
     -webkit-filter: grayscale(0%);
+}
+
+.detail-title {
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.detail-image {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.detail-text {
+    font-size: 18px;
+    line-height: 2;
+    padding: 0 3.5em;
 }
 
 footer {
