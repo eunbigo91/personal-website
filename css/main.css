@@ -67,7 +67,8 @@ p {
     color: white;
     border-left: 2px solid #fff;
     padding: 0 1em;
-    height: 100px;
+    height: 68px;
+    width: 80%;
 }
 
 .title {
@@ -77,17 +78,17 @@ p {
 
 .text {
     font-size: 18px;
-    line-height: 2.5;
+    line-height: 2;
     padding: 0 3.5em;
 }
 
 .name {
-    margin: 1.2em 0 0;
+    font-size: 20px;
 }
 
 .job-title {
-    font-weight: 300;
     margin: .5em 0;
+    font-size: 16px;
 }
 
 .contact-info a{
@@ -97,7 +98,7 @@ p {
     padding: 10px;
     top: 50px;
     color: #fff;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .contact-info a:hover{
@@ -155,6 +156,13 @@ p {
     padding: 0 3.5em;
 }
 
+.detail-text:first-letter {
+  float: left;
+  font-size: 50px;
+  line-height: 60px;
+  padding-right: 8px;
+}
+
 footer {
     margin: 2em 0 0;
     padding: 1em 0;
@@ -191,8 +199,9 @@ footer a:hover{
     font-size: 15px;
 }
 
+
 #contact-area {
-    width: 566px;
+    width: 400px;
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -200,7 +209,7 @@ footer a:hover{
 
 #contact-area input, #contact-area textarea {
     padding: 5px;
-    width: 450px;
+    width: 200px;
     margin: 0px 0px 10px 0px;
     border: 1px solid rgba(212, 164, 94, 0.48);
 }
@@ -214,47 +223,71 @@ footer a:hover{
 }
 
 #contact-area input.submit-button {
-    float: right;
+    margin-left: 101px;
     background-color: rgba(212, 164, 94, 0.48);
 }
 
 label {
     float: left;
     text-align: right;
-    margin-right: 15px;
+    margin-right: 2px;
     width: 100px;
     padding-top: 5px;
 }
 
-@media screen and (min-width: 550px) and (max-width: 767px) {
+@media screen and (min-width: 550px){
     #recent-work1, #recent-work2 {
         width: 50%;
     }
 
     .name {
-        font-size: 30px;
+        font-size: 21px;
     }
 
     .job-title {
-        font-size: 25px;
-        font-weight: 300;
+        font-size: 20px;
+    }
+
+    .contact-info a{
+        font-size: 15px;
     }
 
     .small-text {
-        font-size: 25px;
+        font-size: 20px;
     }
+
+    .main {
+        height: 73px;
+    }
+
+    form {
+        margin-left: -65px;
+    }
+
+    #contact-area {
+        width: 423px;
+    }
+
+    #contact-area input, #contact-area textarea {
+        width: 366px;
+    }
+
 }
 
 /* Small devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px){
+    .main {
+        height: 92px;
+    }
+
     .logo {
         margin: .5em 0 0;
         max-width: 150px;
     }
 
     .name {
-        margin: .5em 0 0;
-        font-size: 45px;
+        margin: 0.5em 0 0;
+        font-size: 32px;
     }
 
     .job-title {
@@ -267,17 +300,58 @@ label {
     }
 
     .featured-work{
-        height: 143px;
+        height: 185px;
     }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    .name{
+    .main {
+        height: 80px;
+    }
+
+    .name {
         margin: 0;
+        font-size: 42px;
+    }
+
+    .job-title {
+        font-size: 24px;
+    }
+
+    .text {
+        line-height: 2.5;
     }
 
     .featured-work {
         height: 190px;
+    }
+
+    #contact-area {
+        width: 566px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #contact-area input, #contact-area textarea {
+        width: 450px;
+    }
+
+    form {
+        margin-left: -105px;
+    }
+
+    label {
+        float: left;
+        text-align: right;
+        margin-right: 15px;
+        width: 100px;
+        padding-top: 5px;
+    }
+
+    #contact-area input.submit-button {
+        margin-left: 116px;
+        background-color: rgba(212, 164, 94, 0.48);
     }
 }
