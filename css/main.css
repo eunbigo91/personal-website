@@ -145,6 +145,13 @@ p {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.hanging-close {
+    position: absolute;
+    top: -2px;
+    right: -15px;
+    color:#000;
+}
+
 .detail-image {
     width: 80%;
     margin-left: 10%;
@@ -161,6 +168,10 @@ p {
   font-size: 50px;
   line-height: 60px;
   padding-right: 8px;
+}
+
+[class*="fa-"] {
+  margin: 0 .5em .5em;
 }
 
 footer {

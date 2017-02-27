@@ -88,6 +88,10 @@ $(function(){
             html += '<h3 class="detail-title text-center">'+project.title+'</h3>';
             html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
             html += '<p class="detail-text">'+project.descriptions+'</p>';
+            html += '<div class="text-center">';
+            html += '<i class="fa fa-play-circle" style="font-size:30px" aria-hidden="true"></i>';
+            html += '<i class="fa fa-github" style="font-size:30px"></i>';
+            html += '</div>';
             $("#project-detail").html(html);
         }
     };
