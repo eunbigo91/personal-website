@@ -8,37 +8,43 @@ $(function(){
                 "title" : "Movie Trailer",
                 "pic" : "img/project1.png",
                 "descriptions" : "Server-side code written in Python to store a list of my favorite movies. This data is then served to a web page using HTML and CSS allowing visitors to review these movies and watch the trailers.",
-                "url" : ""
+                "url" : "",
+                "githubUrl" : "https://github.com/eunbigo91/project1-movie-trailer"
             },
             {
                 "title" : "Build Portfolio",
                 "pic" : "img/project2.png",
                 "descriptions" : "Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.",
-                "url" : ""
+                "url" : "",
+                "githubUrl" : "https://github.com/eunbigo91/project2-build-portfolio"
             },
             {
                 "title" : "Multi User Blog",
                 "pic" : "img/project3.png",
                 "descriptions" : "Built a multi-user blog, hosted on Google App Engine, with comments and login functionality. Developed authentication functionality using hmac module and saved users’ password securely using hashlib. ",
-                "url" : ""
+                "url" : "",
+                "githubUrl" : "https://github.com/eunbigo91/project3-multi-user-blog"
             },
             {
                 "title" : "Item Catalog",
                 "pic" : "img/project5.png",
                 "descriptions" : "Developed a content management system using the Flask framework in Python. Authentication is provided via OAuth and all data is stored within a PostgreSQL database.",
-                "url" : ""
+                "url" : "",
+                "githubUrl" : "https://github.com/eunbigo91/project5-item-catalog"
             },
             {
                 "title" : "Neighborhood Map",
                 "pic" : "img/project6.png",
                 "descriptions" : "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare and Wikipedia APIs.",
-                "url" : ""
+                "url" : "",
+                "githubUrl" : "https://github.com/eunbigo91/project6-neighborhood-map"
             },
             {
                 "title" : "Personal Blog Using Wordpress",
                 "pic" : "img/blog.png",
                 "descriptions" : "Used Wordpress and Wordpress basic theme to build my personal blog.",
-                "url" : ""
+                "url" : "",
+                "githubUrl" : "https://github.com/eunbigo91/myWordPress"
             }
         ]
     };
@@ -88,9 +94,9 @@ $(function(){
             html += '<h3 class="detail-title text-center">'+project.title+'</h3>';
             html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
             html += '<p class="detail-text">'+project.descriptions+'</p>';
-            html += '<div class="text-center">';
+            html += '<div class="text-center detail-icons">';
             html += '<i class="fa fa-play-circle" style="font-size:30px" aria-hidden="true"></i>';
-            html += '<i class="fa fa-github" style="font-size:30px"></i>';
+            html += '<a href="'+project.githubUrl+'"><i class="fa fa-github" style="font-size:30px"></i></a>';
             html += '</div>';
             $("#project-detail").html(html);
         }
