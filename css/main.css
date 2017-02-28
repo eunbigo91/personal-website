@@ -34,6 +34,7 @@ p {
     height: 100vh;
 }
 
+
 .arrows {
     width: 41px;
     height: 44px;
@@ -48,14 +49,20 @@ p {
     fill: transparent;
     stroke-width: 2px
 }
+
+.border-bottom {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+}
+
 .logo {
-    margin: .5em 0 0;
-    max-width: 160px;
+    margin: -0.5em 2em 0 -1.5em;
+    max-width: 155px;
 }
 
 .mypic {
-    margin: .5em 0 0;
-    max-width: 100px;
+    margin: -0.5em 0 0;
+    max-width: 95px;
 }
 
 .main {
@@ -71,9 +78,13 @@ p {
     width: 80%;
 }
 
+.title-div {
+    margin: 3em 0 1.5em;
+}
+
 .title {
+    font-size: 26px;
     font-family: 'Ubuntu', sans-serif;
-    margin: 1em 0 .5em;
 }
 
 .text {
@@ -126,8 +137,62 @@ p {
     background-color: rgba(152, 146, 145, 0.43);
 }
 
+.bg-color3 {
+    background-color: #ead3b2;
+}
+
 .bottom-space {
     margin: 1.5em 0;
+}
+
+.design {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../img/design.jpg);
+    background-size: cover;
+    margin: 1em 0 2em;
+    height: 200px;
+    border-right: 10px solid #ead3b2;
+}
+
+.design h2 {
+    padding: 2.5em;
+}
+
+.develop {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../img/develop.jpg);
+    background-size: cover;
+    margin: 1em 0 2em;
+    height: 200px;
+}
+
+.develop h2 {
+    padding: 2.5em;
+}
+
+.studying {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../img/studying.jpg);
+    background-size: cover;
+    margin: 1em 0 2em;
+    height: 200px;
+    border-left: 10px solid #ead3b2;
+}
+
+.studying h2 {
+    padding: 2.5em;
 }
 
 .project-tile {
@@ -279,11 +344,6 @@ label {
 @media screen and (min-width: 768px){
     .main {
         height: 92px;
-    }
-
-    .logo {
-        margin: .5em 0 0;
-        max-width: 150px;
     }
 
     .name {
