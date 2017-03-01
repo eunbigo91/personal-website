@@ -50,9 +50,8 @@ p {
     stroke-width: 2px
 }
 
-.border-bottom {
-    border-bottom: 1px solid;
-    padding-bottom: 10px;
+.section-bottom{
+    margin: 2em;
 }
 
 .logo {
@@ -130,69 +129,61 @@ p {
 }
 
 .bg-color1 {
-    background-color: #c5443b;
+    background-color: #eff7f6;
 }
 
 .bg-color2 {
-    background-color: rgba(152, 146, 145, 0.43);
+    background-color: #fff;
 }
 
 .bg-color3 {
-    background-color: #ead3b2;
+    background-color: #4e6471;
+}
+
+.bg-color4 {
+    background-color: #f1f4fc;
+}
+
+.bg-color5 {
+    background-color: #e1e1e1;
+}
+
+.border-bottom {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
 }
 
 .bottom-space {
     margin: 1.5em 0;
 }
 
-.design {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url(../img/design.jpg);
-    background-size: cover;
-    margin: 1em 0 2em;
-    height: 200px;
-    border-right: 10px solid #ead3b2;
+.circle {
+    border-radius:50%;
+    width: 120px;
+    height: 120px;
+    background: #000;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
 }
 
-.design h2 {
-    padding: 2.5em;
+.circle i {
+    color: #fff;
+    margin-top: 38px;
+    margin-left: 23px;
 }
 
-.develop {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url(../img/develop.jpg);
-    background-size: cover;
-    margin: 1em 0 2em;
-    height: 200px;
+.whatimage {
+    position: relative;
+    width: 100%;
+        background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.4);
 }
 
-.develop h2 {
-    padding: 2.5em;
-}
-
-.studying {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url(../img/studying.jpg);
-    background-size: cover;
-    margin: 1em 0 2em;
-    height: 200px;
-    border-left: 10px solid #ead3b2;
-}
-
-.studying h2 {
-    padding: 2.5em;
+.whattitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    width: 100%;
 }
 
 .project-tile {
@@ -244,7 +235,6 @@ p {
 }
 
 footer {
-    margin: 2em 0 0;
     padding: 1em 0;
 }
 
@@ -256,7 +246,7 @@ footer a, footer a:hover{
 }
 
 .icons {
-    margin: 2em 0;
+    margin: 2em 0 0 0;
 }
 
 .icons a, .icons a:hover{
@@ -277,7 +267,7 @@ footer a, footer a:hover{
     padding: 5px;
     width: 200px;
     margin: 0px 0px 10px 0px;
-    border: 1px solid rgba(212, 164, 94, 0.48);
+    border: 1px solid #21283b;
 }
 
 #contact-area textarea {
@@ -290,7 +280,8 @@ footer a, footer a:hover{
 
 #contact-area input.submit-button {
     margin-left: 101px;
-    background-color: rgba(212, 164, 94, 0.48);
+    background-color: #21283b;
+    color: #fff;
 }
 
 label {
@@ -361,7 +352,12 @@ label {
     }
 
     .featured-work{
-        height: 185px;
+        height: 205px;
+    }
+
+    .design .studying .develop{
+        border-left: 5px solid #ead3b2;
+        border-right: 5px solid #ead3b2;
     }
 }
 
@@ -385,7 +381,7 @@ label {
     }
 
     .featured-work {
-        height: 190px;
+        height: 220px;
     }
 
     #contact-area {
@@ -413,6 +409,5 @@ label {
 
     #contact-area input.submit-button {
         margin-left: 116px;
-        background-color: rgba(212, 164, 94, 0.48);
     }
 }
