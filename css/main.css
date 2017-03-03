@@ -218,20 +218,12 @@ p {
 
 .detail-image {
     width: 80%;
-    margin-left: 10%;
 }
 
 .detail-text {
     font-size: 18px;
     line-height: 2;
     padding: 0 3.5em;
-}
-
-.detail-text:first-letter {
-  float: left;
-  font-size: 50px;
-  line-height: 60px;
-  padding-right: 8px;
 }
 
 [class*="fa-"] {
