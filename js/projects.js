@@ -102,7 +102,6 @@ $(function(){
             html += '<p class="detail-text">'+project.date+'</p>';
             html += '<p class="detail-text">'+project.descriptions+'</p>';
             html += '<div class="text-center detail-icons">';
-            html += '<i class="fa fa-play-circle" style="font-size:30px" aria-hidden="true"></i>';
             html += '<a href="'+project.githubUrl+'"><i class="fa fa-github" style="font-size:30px"></i></a>';
             html += '</div>';
             $("#project-detail").html(html);
