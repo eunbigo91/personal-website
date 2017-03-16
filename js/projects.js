@@ -83,7 +83,13 @@ $(function(){
         init: function() {
             this.render();
             Galleria.loadTheme('js/lib/galleria/themes/classic/galleria.classic.min.js');
-            Galleria.run('.galleria');
+            Galleria.configure({
+                showInfo: false
+            });
+            Galleria.run('.galleria', {
+                height: 0.5625,
+                autoplay: 3000
+            });
         },
         render: function() {
             var projects = octopus.getProjects();
@@ -100,7 +106,7 @@ $(function(){
 
     var detailView = {
         init: function() {
-            $('.project-tile').click(function(obj) {
+            $('.project-tile').mouseover(function(obj) {
                 detailView.render(obj);
             });
         },
