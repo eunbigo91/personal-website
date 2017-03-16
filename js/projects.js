@@ -51,6 +51,14 @@ $(function(){
                 "descriptions" : "Used Wordpress and Wordpress basic theme to build my personal blog.",
                 "url" : "",
                 "githubUrl" : "https://github.com/eunbigo91/myWordPress"
+            },
+            {
+                "title" : "Personal Resume Using JavaScript",
+                "pic" : "img/project7.png",
+                "date" : "Jan. 2017",
+                "descriptions" : "Used JavaScript to build resume website.",
+                "url" : "",
+                "githubUrl" : "https://github.com/eunbigo91/project6-practice/tree/master/resume"
             }
         ]
     };
@@ -74,15 +82,18 @@ $(function(){
     var view = {
         init: function() {
             this.render();
+            Galleria.loadTheme('js/lib/galleria/themes/classic/galleria.classic.min.js');
+            Galleria.run('.galleria');
         },
         render: function() {
             var projects = octopus.getProjects();
-            var html = '';
+            var html = '<div class="galleria">';
             $.each(projects, function(projectIndex, project) {
-                html += '<div class="col-xs-12 col-sm-6 col-md-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
-                html += '<picture> <img class="featured-work" src="'+project.pic+'" alt="project screen shot"></picture>';
-                html += '</div>';
+                //html += '<div class="col-xs-12 col-sm-6 col-md-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
+                html += '<picture> <img class="featured-work" src="'+project.pic+'" alt="'+project.title+'"></picture>';
+                //html += '</div>';
             });
+            html += '</div>';
             $('#project').html(html);
         }
     };
