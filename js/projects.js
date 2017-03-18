@@ -84,7 +84,8 @@ $(function(){
             this.render();
             Galleria.loadTheme('js/lib/galleria/themes/classic/galleria.classic.min.js');
             Galleria.configure({
-                showInfo: false
+                showInfo: false,
+                lightbox: true
             });
             Galleria.run('.galleria', {
                 height: 0.5625,
@@ -95,9 +96,7 @@ $(function(){
             var projects = octopus.getProjects();
             var html = '<div class="galleria">';
             $.each(projects, function(projectIndex, project) {
-                //html += '<div class="col-xs-12 col-sm-6 col-md-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
-                html += '<picture> <img class="featured-work" src="'+project.pic+'" alt="'+project.title+'"></picture>';
-                //html += '</div>';
+                html += '<img src="'+project.pic+'" title="'+project.title+'" alt="'+project.descriptions+'"></picture>';
             });
             html += '</div>';
             $('#project').html(html);
@@ -106,22 +105,23 @@ $(function(){
 
     var detailView = {
         init: function() {
-            $('.project-tile').mouseover(function(obj) {
-                detailView.render(obj);
+            Galleria.on('image', function(e) {
+                detailView.render(this._active);
             });
         },
         render: function(obj) {
-            var selected = obj.currentTarget.id.split("-")[1];
+            console.log(obj);
+            //var selected = obj.currentTarget.id.split("-")[1];
             var html = '';
-            var project = octopus.getProjects()[selected];
+            var project = octopus.getProjects()[obj];
             html += '<h3 class="detail-title text-center">'+project.title+'</h3>';
-            html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
-            html += '<p class="detail-text">'+project.date+'</p>';
-            html += '<p class="detail-text">'+project.descriptions+'</p>';
-            html += '<div class="text-center detail-icons">';
-            html += '<a href="'+project.githubUrl+'"><i class="fa fa-github" style="font-size:30px"></i></a>';
-            html += '</div>';
-            $("#project-detail").html(html);
+            //html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
+            //html += '<p class="detail-text">'+project.date+'</p>';
+            //html += '<p class="detail-text">'+project.descriptions+'</p>';
+            //html += '<div class="text-center detail-icons">';
+            //html += '<a href="'+project.githubUrl+'"><i class="fa fa-github" style="font-size:30px"></i></a>';
+            //html += '</div>';
+            $(".galleria-lightbox-image").html(html);
         }
     };
 
