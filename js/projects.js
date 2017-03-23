@@ -40,7 +40,7 @@ $(function(){
                 "title" : "Neighborhood Map",
                 "pic" : "img/project6.png",
                 "date" : "Jan. 2017",
-                "descriptions" : "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare and Wikipedia APIs.",
+                "descriptions" : "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the Wikipedia APIs.",
                 "url" : "",
                 "githubUrl" : "https://github.com/eunbigo91/project6-neighborhood-map"
             },
@@ -53,10 +53,10 @@ $(function(){
                 "githubUrl" : "https://github.com/eunbigo91/myWordPress"
             },
             {
-                "title" : "Personal Resume Using JavaScript",
+                "title" : "Personal Resume website",
                 "pic" : "img/project7.png",
                 "date" : "Jan. 2017",
-                "descriptions" : "Used JavaScript to build resume website.",
+                "descriptions" : "Used JavaScript to build a resume website.",
                 "url" : "",
                 "githubUrl" : "https://github.com/eunbigo91/project6-practice/tree/master/resume"
             }
@@ -68,7 +68,15 @@ $(function(){
     var octopus = {
         init: function() {
             view.init();
-            detailView.init();
+            $("#gallery").unitegallery({
+                tiles_type:"justified",
+                tile_show_link_icon:true,
+                tiles_justified_space_between:0,
+                tile_enable_textpanel:true,
+                tile_textpanel_title_text_align: "center",
+                lightbox_slider_control_zoom:false,
+                lightbox_textpanel_enable_description: true,
+            });
         },
 
         getProjects: function() {
@@ -82,50 +90,19 @@ $(function(){
     var view = {
         init: function() {
             this.render();
-            Galleria.loadTheme('js/lib/galleria/themes/classic/galleria.classic.min.js');
-            Galleria.configure({
-                showInfo: false,
-                lightbox: true
-            });
-            Galleria.run('.galleria', {
-                height: 0.5625,
-                autoplay: 3000
-            });
         },
         render: function() {
             var projects = octopus.getProjects();
-            var html = '<div class="galleria">';
-            $.each(projects, function(projectIndex, project) {
-                html += '<img src="'+project.pic+'" title="'+project.title+'" alt="'+project.descriptions+'"></picture>';
-            });
-            html += '</div>';
-            $('#project').html(html);
-        }
-    };
-
-    var detailView = {
-        init: function() {
-            Galleria.on('image', function(e) {
-                detailView.render(this._active);
-            });
-        },
-        render: function(obj) {
-            console.log(obj);
-            //var selected = obj.currentTarget.id.split("-")[1];
             var html = '';
-            var project = octopus.getProjects()[obj];
-            html += '<h3 class="detail-title text-center">'+project.title+'</h3>';
-            //html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
-            //html += '<p class="detail-text">'+project.date+'</p>';
-            //html += '<p class="detail-text">'+project.descriptions+'</p>';
-            //html += '<div class="text-center detail-icons">';
-            //html += '<a href="'+project.githubUrl+'"><i class="fa fa-github" style="font-size:30px"></i></a>';
-            //html += '</div>';
-            $(".galleria-lightbox-image").html(html);
+            $.each(projects, function(projectIndex, project) {
+                //html += '<div class="col-xs-12 col-sm-6 col-md-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
+                html += '<a href="'+project.githubUrl+'"><img src="'+project.pic+'" data-image="'+project.pic+'" alt="'+project.title+'" data-description="'+project.descriptions+'"></a>';
+                //html += '</div>';
+            });
+            $('#gallery').html(html);
         }
     };
 
     octopus.init();
 
 });
-
