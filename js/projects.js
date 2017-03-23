@@ -53,7 +53,7 @@ $(function(){
                 "githubUrl" : "https://github.com/eunbigo91/myWordPress"
             },
             {
-                "title" : "Personal Resume Using JavaScript",
+                "title" : "Personal Resume website",
                 "pic" : "img/project7.png",
                 "date" : "Jan. 2017",
                 "descriptions" : "Used JavaScript to build a resume website.",
@@ -68,7 +68,6 @@ $(function(){
     var octopus = {
         init: function() {
             view.init();
-            detailView.init();
             $("#gallery").unitegallery({
                 tiles_type:"justified",
                 tile_show_link_icon:true,
@@ -97,31 +96,10 @@ $(function(){
             var html = '';
             $.each(projects, function(projectIndex, project) {
                 //html += '<div class="col-xs-12 col-sm-6 col-md-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
-                html += '<img src="'+project.pic+'" data-image="'+project.pic+'" alt="'+project.title+'" data-description="'+project.descriptions+'">';
+                html += '<a href="'+project.githubUrl+'"><img src="'+project.pic+'" data-image="'+project.pic+'" alt="'+project.title+'" data-description="'+project.descriptions+'"></a>';
                 //html += '</div>';
             });
             $('#gallery').html(html);
-        }
-    };
-
-    var detailView = {
-        init: function() {
-            $('.project-tile').click(function(obj) {
-                detailView.render(obj);
-            });
-        },
-        render: function(obj) {
-            var selected = obj.currentTarget.id.split("-")[1];
-            var html = '';
-            var project = octopus.getProjects()[selected];
-            html += '<h3 class="detail-title text-center">'+project.title+'</h3>';
-            html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
-            html += '<p class="detail-text">'+project.date+'</p>';
-            html += '<p class="detail-text">'+project.descriptions+'</p>';
-            html += '<div class="text-center detail-icons">';
-            html += '<a href="'+project.githubUrl+'"><i class="fa fa-github" style="font-size:30px"></i></a>';
-            html += '</div>';
-            $("#project-detail").html(html);
         }
     };
 
