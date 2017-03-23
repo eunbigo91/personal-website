@@ -197,36 +197,10 @@ p {
     padding: 0 1.5em;
 }
 
-.project-tile {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.project-tile:hover {
-    background-color: rgba(224, 193, 190, 0.43);
-    -webkit-filter: grayscale(0%);
-}
-
-.detail-title {
-    font-size: 20px;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.hanging-close {
-    position: absolute;
-    top: -2px;
-    right: -8px;
-    color: #808080;
-}
-
-.detail-image {
-    width: 80%;
-}
-
-.detail-text {
-    font-size: 18px;
-    line-height: 2;
-    padding: 0 3.5em;
+#gallery {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
 
 [class*="fa-"] {
