@@ -34,12 +34,6 @@ p {
     height: 300px;
 }
 
-.galleria {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .arrows {
     width: 41px;
     height: 44px;
@@ -203,10 +197,6 @@ p {
     padding: 0 1.5em;
 }
 
-#project {
-    margin: 3.5em 0 1em;
-}
-
 .project-tile {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -368,6 +358,10 @@ label {
         font-size: 28px;
     }
 
+    .featured-work{
+        height: 205px;
+    }
+
     .design .studying .develop{
         border-left: 5px solid #ead3b2;
         border-right: 5px solid #ead3b2;
@@ -391,6 +385,10 @@ label {
 
     .text {
         line-height: 2.5;
+    }
+
+    .featured-work {
+        height: 220px;
     }
 
     #contact-area {

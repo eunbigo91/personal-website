@@ -51,14 +51,6 @@ $(function(){
                 "descriptions" : "Used Wordpress and Wordpress basic theme to build my personal blog.",
                 "url" : "",
                 "githubUrl" : "https://github.com/eunbigo91/myWordPress"
-            },
-            {
-                "title" : "Personal Resume Using JavaScript",
-                "pic" : "img/project7.png",
-                "date" : "Jan. 2017",
-                "descriptions" : "Used JavaScript to build resume website.",
-                "url" : "",
-                "githubUrl" : "https://github.com/eunbigo91/project6-practice/tree/master/resume"
             }
         ]
     };
@@ -82,50 +74,40 @@ $(function(){
     var view = {
         init: function() {
             this.render();
-            Galleria.loadTheme('js/lib/galleria/themes/classic/galleria.classic.min.js');
-            Galleria.configure({
-                showInfo: false,
-                lightbox: true
-            });
-            Galleria.run('.galleria', {
-                height: 0.5625,
-                autoplay: 3000
-            });
         },
         render: function() {
             var projects = octopus.getProjects();
-            var html = '<div class="galleria">';
+            var html = '';
             $.each(projects, function(projectIndex, project) {
-                html += '<img src="'+project.pic+'" title="'+project.title+'" alt="'+project.descriptions+'"></picture>';
+                html += '<div class="col-xs-12 col-sm-6 col-md-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
+                html += '<picture> <img class="featured-work" src="'+project.pic+'" alt="project screen shot"></picture>';
+                html += '</div>';
             });
-            html += '</div>';
             $('#project').html(html);
         }
     };
 
     var detailView = {
         init: function() {
-            Galleria.on('image', function(e) {
-                detailView.render(this._active);
+            $('.project-tile').click(function(obj) {
+                detailView.render(obj);
             });
         },
         render: function(obj) {
-            console.log(obj);
-            //var selected = obj.currentTarget.id.split("-")[1];
+            var selected = obj.currentTarget.id.split("-")[1];
             var html = '';
-            var project = octopus.getProjects()[obj];
+            var project = octopus.getProjects()[selected];
             html += '<h3 class="detail-title text-center">'+project.title+'</h3>';
-            //html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
-            //html += '<p class="detail-text">'+project.date+'</p>';
-            //html += '<p class="detail-text">'+project.descriptions+'</p>';
-            //html += '<div class="text-center detail-icons">';
-            //html += '<a href="'+project.githubUrl+'"><i class="fa fa-github" style="font-size:30px"></i></a>';
-            //html += '</div>';
-            $(".galleria-lightbox-image").html(html);
+            html += '<picture> <img class="detail-image" src="'+project.pic+'" alt="project screen shot"></picture>';
+            html += '<p class="detail-text">'+project.date+'</p>';
+            html += '<p class="detail-text">'+project.descriptions+'</p>';
+            html += '<div class="text-center detail-icons">';
+            html += '<a href="'+project.githubUrl+'"><i class="fa fa-github" style="font-size:30px"></i></a>';
+            html += '</div>';
+            $("#project-detail").html(html);
         }
     };
 
     octopus.init();
 
 });
-
