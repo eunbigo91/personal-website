@@ -5,14 +5,6 @@ $(function(){
     var model = {
         projects: [
             {
-                "title" : "Movie Trailer",
-                "pic" : "img/project1.png",
-                "date" : "Jul. 2016",
-                "descriptions" : "Server-side code written in Python to store a list of my favorite movies. This data is then served to a web page using HTML and CSS allowing visitors to review these movies and watch the trailers.",
-                "url" : "",
-                "githubUrl" : "https://github.com/eunbigo91/project1-movie-trailer"
-            },
-            {
                 "title" : "Build Portfolio",
                 "pic" : "img/project2.png",
                 "date" : "Aug. 2016",
@@ -25,8 +17,16 @@ $(function(){
                 "pic" : "img/project3.png",
                 "date" : "Oct. 2016",
                 "descriptions" : "Built a multi-user blog, hosted on Google App Engine, with comments and login functionality. Developed authentication functionality using hmac module and saved users’ password securely using hashlib. ",
-                "url" : "",
+                "url" : "https://multi-user-blog-emily.appspot.com/",
                 "githubUrl" : "https://github.com/eunbigo91/project3-multi-user-blog"
+            },
+             {
+                "title" : "Neighborhood Map",
+                "pic" : "img/project6.png",
+                "date" : "Jan. 2017",
+                "descriptions" : "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the Wikipedia APIs.",
+                "url" : "",
+                "githubUrl" : "https://github.com/eunbigo91/project6-neighborhood-map"
             },
             {
                 "title" : "Item Catalog",
@@ -37,12 +37,12 @@ $(function(){
                 "githubUrl" : "https://github.com/eunbigo91/project5-item-catalog"
             },
             {
-                "title" : "Neighborhood Map",
-                "pic" : "img/project6.png",
+                "title" : "Personal Resume website",
+                "pic" : "img/project7.png",
                 "date" : "Jan. 2017",
-                "descriptions" : "A single-page web application, built using the Knockout framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the Wikipedia APIs.",
+                "descriptions" : "Used JavaScript to build a resume website.",
                 "url" : "",
-                "githubUrl" : "https://github.com/eunbigo91/project6-neighborhood-map"
+                "githubUrl" : "https://github.com/eunbigo91/project6-practice/tree/master/resume"
             },
             {
                 "title" : "Personal Blog Using Wordpress",
@@ -53,12 +53,12 @@ $(function(){
                 "githubUrl" : "https://github.com/eunbigo91/myWordPress"
             },
             {
-                "title" : "Personal Resume website",
-                "pic" : "img/project7.png",
-                "date" : "Jan. 2017",
-                "descriptions" : "Used JavaScript to build a resume website.",
+                "title" : "Movie Trailer",
+                "pic" : "img/project1.png",
+                "date" : "Jul. 2016",
+                "descriptions" : "Server-side code written in Python to store a list of my favorite movies. This data is then served to a web page using HTML and CSS allowing visitors to review these movies and watch the trailers.",
                 "url" : "",
-                "githubUrl" : "https://github.com/eunbigo91/project6-practice/tree/master/resume"
+                "githubUrl" : "https://github.com/eunbigo91/project1-movie-trailer"
             }
         ]
     };
@@ -94,9 +94,16 @@ $(function(){
         render: function() {
             var projects = octopus.getProjects();
             var html = '';
+            var curUrl = '';
             $.each(projects, function(projectIndex, project) {
+                if (project.url){
+                    curUrl = project.url;
+                }
+                else {
+                    curUrl = project.githubUrl;
+                }
                 //html += '<div class="col-xs-12 col-sm-6 col-md-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
-                html += '<a href="'+project.githubUrl+'"><img src="'+project.pic+'" data-image="'+project.pic+'" alt="'+project.title+'" data-description="'+project.descriptions+'"></a>';
+                html += '<a href="'+curUrl+'"><img src="'+project.pic+'" data-image="'+project.pic+'" alt="'+project.title+'" data-description="'+project.descriptions+'"></a>';
                 //html += '</div>';
             });
             $('#gallery').html(html);

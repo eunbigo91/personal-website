@@ -128,6 +128,10 @@ p {
 }
 
 .bg-color1 {
+    background:
+        url(../img/dotted.png) top left,
+        url(../img/dotted2.png) top right;
+    background-position: 50% 0;
     background-color: #eff7f6;
 }
 
