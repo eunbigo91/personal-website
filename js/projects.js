@@ -70,12 +70,18 @@ $(function(){
             view.init();
             $("#gallery").unitegallery({
                 tiles_type:"justified",
+                theme_enable_preloader: false,
                 tile_show_link_icon:true,
-                tiles_justified_space_between:0,
                 tile_enable_textpanel:true,
-                tile_textpanel_title_text_align: "center",
+                tile_textpanel_title_text_align:"center",
+                tile_textpanel_title_font_size:16,
+                lightbox_overlay_opacity:0.8,
                 lightbox_slider_control_zoom:false,
-                lightbox_textpanel_enable_description: true,
+                lightbox_textpanel_enable_description:true,
+                lightbox_textpanel_title_font_family:"Ubuntu",
+                lightbox_textpanel_title_font_size:16,
+                lightbox_textpanel_desc_font_family:"Cormorant Garamond",
+                lightbox_textpanel_desc_font_size:14,
             });
         },
 
@@ -102,9 +108,7 @@ $(function(){
                 else {
                     curUrl = project.githubUrl;
                 }
-                //html += '<div class="col-xs-12 col-sm-6 col-md-4 bottom-space project-tile" id="project-'+projectIndex+'" data-toggle="modal" data-target="#details">';
                 html += '<a href="'+curUrl+'"><img src="'+project.pic+'" data-image="'+project.pic+'" alt="'+project.title+'" data-description="'+project.descriptions+'"></a>';
-                //html += '</div>';
             });
             $('#gallery').html(html);
         }
