@@ -12,11 +12,15 @@ $('a[href*="#"]:not([href="#"])').click(function() {
   }
 });
 
-function topnavFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
+$(".hamburger").click(function() {
+  if ($(".topnav").hasClass("responsive")) {
+    $(".topnav").removeClass("responsive");
+  } else {
+    $(".topnav").addClass("responsive");
+  }
+});
+
+
+$(".topnav .navLink").click(function(event) {
+    $(".topnav").removeClass("responsive");
+});
