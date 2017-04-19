@@ -13,3 +13,11 @@ $('a[href*="#"]:not([href="#"])').click(function() {
   }
 });
 
+function topnavFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}

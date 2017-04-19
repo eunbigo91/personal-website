@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-header {
+.first {
     background:
         linear-gradient(
           rgba(0, 0, 0, 0.3),
@@ -24,6 +24,30 @@ img {
 
 p {
     font-size: 16px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav .icon {
+    display: none;
 }
 
 .full {
@@ -277,7 +301,28 @@ label {
     margin-top: 4em;
 }
 
+@media screen and (max-width: 549px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
 @media screen and (min-width: 550px){
+
     #recent-work1, #recent-work2 {
         width: 50%;
     }
