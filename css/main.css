@@ -16,6 +16,7 @@ body {
         ),
         url(../img/bg.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 img {
@@ -182,6 +183,8 @@ p {
       rgba(78, 100, 113, 0.7)
     ),
     url(../img/bg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -348,7 +351,7 @@ label {
     }
 
     .name {
-        font-size: 21px;
+        font-size: 32px;
     }
 
     .job-title {

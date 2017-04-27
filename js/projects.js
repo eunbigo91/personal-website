@@ -75,6 +75,7 @@ $(function(){
                 tile_enable_textpanel:true,
                 tile_textpanel_title_text_align:"center",
                 tile_textpanel_title_font_size:16,
+                tiles_justified_row_height: 230,
                 lightbox_overlay_opacity:0.8,
                 lightbox_slider_control_zoom:false,
                 lightbox_textpanel_enable_description:true,
