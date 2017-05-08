@@ -38,7 +38,6 @@ function initialize() {
         zoomControl: false,
         disableDefaultUI: true,
         disableDoubleClickZoom: true,
-        draggable: false,
         scrollwheel: false
     });
 
