@@ -5,9 +5,10 @@
     -webkit-box-sizing: border-box;
 }
 
-body {
+html, body {
     overflow-x: hidden;
 }
+
 
 .first {
     background:
@@ -17,7 +18,6 @@ body {
         ),
         url(../img/bg.jpg);
     background-size: cover;
-    background-attachment: fixed;
 }
 
 img {
@@ -179,8 +179,6 @@ p {
       rgba(78, 100, 113, 0.7)
     ),
     url(../img/bg2.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -234,6 +232,10 @@ p {
     font-size: 1.1em;
     line-height: 2.5;
     padding: 0 1.5em;
+}
+
+#projects {
+    padding: 0 10px;
 }
 
 #gallery {
@@ -330,7 +332,6 @@ label {
 
     .topnav.responsive {
         background: rgba(51, 51, 51, 0.77);
-        height: 100vh;
     }
     .topnav.responsive .hamburger {
         position: absolute;
@@ -429,6 +430,9 @@ label {
 
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+    .first, .bg-color3 {
+        background-attachment: fixed;
+    }
     .main {
         height: 80px;
     }
